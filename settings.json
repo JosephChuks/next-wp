@@ -1,0 +1,66 @@
+{
+    "api": "https://invexcapitals.com/wp-json/wp/v2",
+    "logo": "/images/logo.png",
+    "icon": "/images/icon.png",
+    "colors": {
+        "primary": "#ff5733",
+        "background": "#f0eeee",
+        "navBackground": "#000",
+        "navColor": "#fff",
+        "containerBackground": "#faf9f9",
+        "searchBackground": "#f4f2f2",
+        "inputPlaceholder": "#999"
+    },
+    "fonts": {
+        "main": "Roboto, sans-serif",
+        "heading": "'Roboto', sans-serif",
+        "googleFonts": [
+            "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+        ]
+    },
+    "comments": {
+        "show": true,
+        "post": false
+    },
+    "contact": {
+        "email": "contact@invexcapitals.com",
+        "whatsapp": "+2347066721094"
+    },
+    "telegram": {
+        "username": "kinsmenICT",
+        "notice": "Contact Us"
+    },
+    "seo": {
+        "title": "Blog Name",
+        "tagline": "A blog for Invex Capitals",
+        "description": "A blog for Invex Capitals",
+        "keywords": "invex capitals, blog, finance, investment",
+        "author": "Invex Capitals",
+        "twitter": "@invexcapitals"
+    },
+    "sidebarMenu": [
+        {
+            "label": "Jobs",
+            "url": "/jobs"
+        },
+        {
+            "label": "Scholarship",
+            "url": "/visa"
+        }
+    ],
+    "mobileMenu": [
+        {
+            "label": "Jobs",
+            "url": "/jobs"
+        },
+        {
+            "label": "Scholarship",
+            "url": "/visa"
+        }
+    ],
+    "googleAnalytics": "G-TE7XRS3W0G",
+    "googleAdsenseId": "",
+    "adSlotOne": "3338578775",
+    "adSlotTwo": "6123173141",
+    "adSlotThree": "2600212171"
+}
