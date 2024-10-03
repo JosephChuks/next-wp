@@ -11,15 +11,17 @@ const Footer = () => {
       </div>
       <div className="menu-footer-container">
         <ul id="menu-footer" className="legal__pages">
-        <li>
-            <Link
-              href={`https://wa.me/${settings.contact.whatsapp}`}
-              target="_blank"
-              aria-current="page"
-            >
-              Whatsapp
-            </Link>
-          </li>
+          {settings.contact.whatsapp &&
+            <li>
+              <Link
+                href={`https://wa.me/${settings.contact.whatsapp}`}
+                target="_blank"
+                aria-current="page"
+              >
+                Whatsapp
+              </Link>
+            </li>
+          }
           <li>
             <Link
               href={settings.contact.email}

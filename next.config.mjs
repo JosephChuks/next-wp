@@ -12,12 +12,7 @@ const nextConfig = {
         protocol: "https",
         hostname: new URL(settings.api).hostname,
         pathname: "**",
-      },
-      {
-        protocol: "https",
-        hostname: "secure.gravatar.com",
-        pathname: "**",
-      },
+      }
     ],
   },
 };

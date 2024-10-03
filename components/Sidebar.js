@@ -1,8 +1,5 @@
 "use client";
 import settings from "@/settings.json";
-
-console.log(settings.sidebarMenu);
-
 const Sidebar = () => {
   return (
     <nav className="sidebar m-none">

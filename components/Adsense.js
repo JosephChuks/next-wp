@@ -1,29 +1,29 @@
 "use client";
-import Script from "next/script";
+import { useEffect, useRef } from "react";
 import settings from "@/settings.json";
 
-function Adsense() {
-  return (
-    <>
+export default function Adsense({ slot, id }) {
+    const hasRun = useRef(false);
 
-      <Script
-        async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-        strategy="afterInteractive"
-        id="adsbygoogle-init"
-      ></Script>
-      <Script
-        id="ads-init"
-        dangerouslySetInnerHTML={{
-          __html: `
-            (adsbygoogle = window.adsbygoogle || []).push({
-              google_ad_client: "${settings.googleAdsenseId}",
-              enable_page_level_ads: true
-            });
-          `,
-        }}
-      ></Script>
-    </>
-  );
+    useEffect(() => {
+        if (!hasRun.current) {
+            (window.adsbygoogle = window.adsbygoogle || []).push({});
+            hasRun.current = true;
+        }
+    }, []);
+
+    return (
+        <>
+            <ins
+                className="adsbygoogle"
+                id={id}
+                style={{ display: "block", textAlign: "center" }}
+                data-ad-client={settings.googleAdsenseId}
+                data-ad-slot={slot}
+                data-ad-format="auto"
+                data-full-width-responsive="true"
+            ></ins>
+        </>
+    );
+
 }
-export default Adsense;

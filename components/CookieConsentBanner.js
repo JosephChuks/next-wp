@@ -72,7 +72,7 @@ const CookieConsentBanner = () => {
       </p>{" "}
       <button
         id="acceptCookies"
-        className="acceptCookies buttonStyle"
+        className="acceptbtn"
         onClick={handleAccept}
       >
         Accept

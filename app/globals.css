@@ -198,11 +198,13 @@ a {
   margin-right: 3rem;
   display: flex;
   flex-direction: column;
+  max-width: 100%;
 }
 
 @media only screen and (max-width: 65.25em) {
   .description {
     margin-right: 3rem;
+    max-width: 100%;
   }
 }
 
@@ -210,7 +212,21 @@ a {
   .description {
     margin-right: 0;
     margin-bottom: 3rem;
+    max-width: 100%;
   }
+}
+
+.description iframe,
+.description img {
+  max-width: 100%; 
+  height: auto;    
+  display: block;  
+  border: none;   
+}
+
+.description iframe {
+  width: 100%;       
+  aspect-ratio: 16/9; 
 }
 
 .description__article {
@@ -799,14 +815,25 @@ p:not(:last-of-type) {
 /********** Articles **************/
 .articles {
   text-decoration: none;
-  color: var(--color-primary);
   background-color: #fff;
   box-shadow: 0 0.5rem 4rem rgba(0, 0, 0, 0.1);
   padding: 1.5rem 2rem;
 }
 
 .articles:not(:last-child) {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.articles_sidebar {
+  text-decoration: none;
+  color: var(--color-primary);
+  background-color: #fff;
+  box-shadow: 0 0.5rem 4rem rgba(0, 0, 0, 0.1);
+  padding: 3px 6px;
+}
+
+.articles_sidebar:not(:last-child) {
+  margin-bottom: 1rem;
 }
 
 .articles__post-content {
@@ -1127,7 +1154,6 @@ label {
 .btn:visited {
   text-decoration: none;
   padding: 1rem 3.5rem;
-  border-radius: 10rem;
   display: inline-block;
   transition: all 0.2s;
   position: relative;
@@ -1154,6 +1180,10 @@ label {
   color: #fff;
 }
 
+.text-white {
+  color: #fff !important;
+}
+
 .skiptranslate {
   display: none;
 }
@@ -1176,9 +1206,6 @@ label {
   outline: none !important;
 }
 
-.acceptCookies {
-  color: #fff
-}
 
 .bannerStyle {
   position: fixed;
@@ -1194,16 +1221,14 @@ label {
 
 ;
 
-.buttonStyle {
-  background-color: var(--color-primary);
+.acceptbtn {
+  background-color: var(--color-primary) !important;
   color: white;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
   margin-left: 10px;
 }
-
-;
 
 .bannerLink {
   color: var(--color-primary);

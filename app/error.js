@@ -1,13 +1,12 @@
+"use client"
 import Adsense from "@/components/Adsense";
-import TitleBar from "@/components/TitleBar";
-import Link from "next/link";
 import settings from "@/settings.json";
-
-const NotFoundPage = () => {
+import TitleBar from "@/components/TitleBar";
+const Error = ({error, reset}) => {
   return (
     <main className="main">
       <TitleBar
-        title="Not Found"
+        title="Error!"
         day={new Date().getDate().toString().padStart(2, "0")}
         year={new Date().toLocaleDateString("en-US", {
           month: "long",
@@ -20,11 +19,9 @@ const NotFoundPage = () => {
             <div class="section__content" style={{ textAlign: "center" }}>
               <div>
                 <h3 class="fw-bold mb-4 text-center">
-                  The link you followed is broken. Page not found!
+                {error.message}
                 </h3>
-                <Link href="/" class="btn btn--primary text-white">
-                  Go to homepage
-                </Link>
+                <button className="btn btn--primary text-white" onClick={() => reset()}>Try Again</button>
               </div>
             </div>
             {settings.googleAdsenseId && settings.googleAdsenseId !== "" && <Adsense id="googleadstwo" slot={settings.squareAd} />}
@@ -35,4 +32,4 @@ const NotFoundPage = () => {
   );
 };
 
-export default NotFoundPage;
+export default Error;

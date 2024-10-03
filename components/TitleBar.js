@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import AdSlot from "@/components/AdSlot";
+import Adsense from "@/components/Adsense";
 import settings from "@/settings.json";
 
 const TitleBar = ({ title, day, year }) => {
@@ -18,7 +18,7 @@ const TitleBar = ({ title, day, year }) => {
           <div className="overview__date-year">{year}</div>
         </div>
       </div>
-      {settings.googleAdsenseId && settings.googleAdsenseId !== "" && <AdSlot id="adsbygooglebannerone" slot={settings.adSlotOne} /> }
+      {settings.googleAdsenseId && settings.googleAdsenseId !== "" && <Adsense id="googleadsone" slot={settings.horizontalAd} /> }
     </>
   );
 };

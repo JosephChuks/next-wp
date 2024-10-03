@@ -13,17 +13,17 @@
     },
     "fonts": {
         "main": "Roboto, sans-serif",
-        "heading": "'Roboto', sans-serif",
+        "heading": "Roboto, sans-serif",
         "googleFonts": [
             "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
         ]
     },
     "comments": {
-        "show": true,
+        "show": false,
         "post": false
     },
     "contact": {
-        "email": "contact@invexcapitals.com",
+        "email": "researchguideng@gmail.com",
         "whatsapp": "+2347066721094"
     },
     "telegram": {
@@ -31,36 +31,55 @@
         "notice": "Contact Us"
     },
     "seo": {
-        "title": "Blog Name",
+        "title": "NextWP Blog",
         "tagline": "A blog for Invex Capitals",
-        "description": "A blog for Invex Capitals",
-        "keywords": "invex capitals, blog, finance, investment",
-        "author": "Invex Capitals",
-        "twitter": "@invexcapitals"
+        "description": "Dive into cutting-edge tech, reviews and the latest trends with the expert team at Gizmodo. Your ultimate source for all things tech.",
+        "keywords": "Latest Tech News, Tech Reviews, Best Gadgets 2024",
+        "author": "NextWP Blog",
+        "twitter": "@JosephChuksT"
     },
     "sidebarMenu": [
         {
-            "label": "Jobs",
-            "url": "/jobs"
+            "label": "Reviews",
+            "url": "/category/reviews"
         },
         {
-            "label": "Scholarship",
-            "url": "/visa"
+            "label": "Tech",
+            "url": "/category/tech"
+        },
+        {
+            "label": "Science",
+            "url": "/category/tech"
+        },
+        {
+            "label": "All Categories",
+            "url": "/category"
         }
     ],
     "mobileMenu": [
         {
-            "label": "Jobs",
-            "url": "/jobs"
+            "label": "Reviews",
+            "url": "/category/reviews"
         },
         {
-            "label": "Scholarship",
-            "url": "/visa"
+            "label": "Tech",
+            "url": "/category/tech"
+        },
+        {
+            "label": "Science",
+            "url": "/category/tech"
+        },
+        {
+            "label": "All Categories",
+            "url": "/category"
         }
     ],
-    "googleAnalytics": "G-TE7XRS3W0G",
-    "googleAdsenseId": "",
-    "adSlotOne": "3338578775",
-    "adSlotTwo": "6123173141",
-    "adSlotThree": "2600212171"
+    "googleAnalytics": "G-8TL1DX6N4C",
+    "googleAdsenseId": "ca-pub-1826072509598689",
+    "horizontalAd": "4025438784",
+    "squareAd": "4712630658",
+    "verticalAd": "5853525776"
 }
+
+
+

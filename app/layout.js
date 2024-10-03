@@ -3,11 +3,11 @@ import Translator from "@/components/Translator";
 import Header from "@/components/Header";
 import Sidebar from "@/components/Sidebar";
 import Footer from "@/components/Footer";
-import Adsense from "@/components/Adsense";
 import Telegram from "@/components/Telegram";
 import CookieConsentBanner from "@/components/CookieConsentBanner";
 import "./globals.css";
 import settings from "@/settings.json";
+import Script from "next/script";
 
 
 export const metadata = {
@@ -84,9 +84,19 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en" suppressHydrationWarning={true}>
-      {googleFontLinks}
-      <style>
-        {`
+      <head>
+        {googleFontLinks}
+        {settings.googleAdsenseId && settings.googleAdsenseId !== "" &&
+        <Script
+          async
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${settings.googleAdsenseId}`}
+          crossOrigin="anonymous"
+          strategy="lazyOnload"
+          id="adsbygoogle"
+        ></Script>}
+
+        <style>
+          {`
             :root {
               --color-primary: ${customStyles["--color-primary"]};
             --background-color: ${customStyles["--background-color"]};
@@ -99,9 +109,10 @@ export default function RootLayout({ children }) {
             --heading-font: ${customStyles["--heading-font"]};
             }
           `}
-      </style>
-      {settings.googleAdsenseId && settings.googleAdsenseId !== "" && <Adsense />}
-      <Translator />
+        </style>
+      
+        <Translator />
+      </head>
       <body>
         <div className="container">
           <Header />
@@ -113,8 +124,9 @@ export default function RootLayout({ children }) {
         </div>
         {settings.telegram.username && <Telegram />}
         {settings.googleAnalytics && <CookieConsentBanner />}
+        {settings.googleAnalytics && <GoogleAnalytics gaId={settings.googleAnalytics} />}
       </body>
-      {settings.googleAnalytics && <GoogleAnalytics gaId={settings.googleAnalytics} />}
+
     </html>
   );
 }

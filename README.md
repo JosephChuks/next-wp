@@ -10,7 +10,7 @@
 
 - **WordPress API Integration**: Fetches and displays WordPress posts, categories, comments, and search results from any WordPress blog via the `/wp-json/wp/v2` endpoint.
 - **SEO Optimized**: Designed with SEO best practices, including metadata for Facebook, Twitter, and schema.org to enhance search engine visibility and social sharing.
-- **Google AdSense Integration**: Built-in support for 3 ad slot placements to easily integrate banner ads and monetize your content.
+- **Google AdSense Integration**: Built-in support for 3 manual ad slot placements and Auto ads to easily integrate banner ads and monetize your content.
 - **Google Analytics Integration**: Track user interactions and traffic with Google Analytics.
 - **Dynamic Language Translator**: An integrated language translator ensures your blog is accessible to a global audience.
 - **Customizable Layout**: Modify colors, fonts, menus, and logos through a simple `settings.json` file.
@@ -125,9 +125,9 @@ Update the `settings.json` file with your WordPress API link, Google AdSense det
   ],
   "googleAnalytics": "G-XXXXXXXXXX",
   "googleAdsenseId": "ca-pub-XXXXXXXXXX",
-  "adSlotOne": "1234567890", // Horizontal banner
-  "adSlotTwo": "1234567890", // Square banner
-  "adSlotThree": "1234567890" // Vertical banner
+  "horizontalAd": "1234567890", // Horizontal banner
+  "squareAd": "1234567890", // Square banner
+  "verticalAd": "1234567890" // Vertical banner
 }
 ```
 ## Run Locally

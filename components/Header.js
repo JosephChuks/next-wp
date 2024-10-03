@@ -27,7 +27,7 @@ const Header = () => {
         <a href="/">
           <Image
             src={settings.logo}
-            alt="Coinmaxx"
+            alt={settings.seo.title}
             className="logo"
             width={300}
             height={300}
